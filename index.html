@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Single Page</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { font-size: 3rem; margin-bottom: 1rem; }
+    p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+    .card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .card p { font-size: 1rem; margin-bottom: 0; }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #764ba2;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover { transform: scale(1.05); }
+    button:active { transform: scale(0.98); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>你好，世界</h1>
+    <p>欢迎来到我的单页面应用</p>
+    <div class="card">
+      <p id="message">点击下面的按钮试试</p>
+      <button id="btn">点我</button>
+    </div>
+  </div>
+  <script>
+    const messages = [
+      '祝你今天开心！',
+      '生活充满惊喜 ✨',
+      '代码改变世界 🚀',
+      '又是美好的一天 ☀️',
+      'Keep going, you are awesome!',
+    ];
+    const btn = document.getElementById('btn');
+    const msg = document.getElementById('message');
+    btn.addEventListener('click', () => {
+      const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+      msg.textContent = randomMsg;
+    });
+  </script>
+</body>
+</html>
