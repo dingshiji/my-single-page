@@ -513,7 +513,7 @@
         "你实验室里那支旧的该换了。<br>
         每次看你做实验的辛劳，我都心疼。<br>
         希望这支新的，能替你分担一点点辛苦。<br>
-        ——爱你的我"
+        ——爱你的老公公"
       </p>
       <button class="prize-close" id="prizeClose">收下心意 💌</button>
     </div>
@@ -758,14 +758,24 @@
       spinBtn.disabled = true;
       wheelCanvas.classList.add('spinning');
 
-      const numSpins = 5 + Math.floor(Math.random() * 4); // 5-8 full rotations
+      // Sync spin end with prize.mp3 at 20s mark
+      const prizeAudio = document.getElementById('prizeAudio');
+      const PRIZE_HIT_TIME = 20; // target second in prize.mp3
+      const MIN_SPIN_DURATION = 3000; // minimum 3s spin
+
+      let remainingMs = MIN_SPIN_DURATION;
+      if (prizeAudio && !prizeAudio.paused && prizeAudio.currentTime < PRIZE_HIT_TIME) {
+        remainingMs = Math.max(MIN_SPIN_DURATION, (PRIZE_HIT_TIME - prizeAudio.currentTime) * 1000);
+      }
+
+      const numSpins = 5 + Math.floor(Math.random() * 4);
       const targetDeg = getTargetAngle();
-      const totalDeg = numSpins * 360 + targetDeg + (Math.random() * 10 - 5); // slight randomness
+      const totalDeg = numSpins * 360 + targetDeg + (Math.random() * 10 - 5);
       const totalRad = totalDeg * Math.PI / 180;
 
       const startRotation = wheelRotation;
       const targetRotation = startRotation + totalRad;
-      const duration = 4000 + Math.random() * 1000; // 4-5 seconds
+      const duration = remainingMs;
       const startTime = performance.now();
 
       function easeOutQuart(t) {
@@ -911,14 +921,6 @@
       spawnConfetti();
       if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
       confettiAnimId = requestAnimationFrame(animateConfetti);
-
-      // Play prize sound effect (over BGM)
-      const prizeAudio = document.getElementById('prizeAudio');
-      if (prizeAudio) {
-        prizeAudio.volume = 0.8;
-        prizeAudio.currentTime = 0;
-        prizeAudio.play().catch(() => {});
-      }
     }
 
     function hidePrize() {
@@ -1016,16 +1018,45 @@
     requestAnimationFrame(renderLoop);
 
     // ───────────────────────────────
-    // 10. SCROLL OBSERVER for page4 wheel init
+    // 10. SCROLL OBSERVER for page4 wheel init + music switch
     // ───────────────────────────────
+    let page4MusicSwitched = false;
     const page4Observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           resizeWheel();
           drawWheel(wheelRotation);
+
+          // Switch BGM → prize music on first arrival
+          if (!page4MusicSwitched) {
+            page4MusicSwitched = true;
+            // Fade out BGM
+            if (musicPlaying) {
+              const fadeOut = setInterval(() => {
+                if (bgMusic.volume > 0.02) {
+                  bgMusic.volume = Math.max(0, bgMusic.volume - 0.03);
+                } else {
+                  bgMusic.pause();
+                  bgMusic.volume = 0.4; // reset for later
+                  clearInterval(fadeOut);
+                }
+              }, 80);
+            }
+            // Play prize music
+            const prizeAudio = document.getElementById('prizeAudio');
+            if (prizeAudio) {
+              prizeAudio.volume = 0.7;
+              prizeAudio.currentTime = 0;
+              prizeAudio.play().catch(() => {});
+            }
+            // Update button state
+            musicPlaying = false;
+            musicBtn.classList.remove('playing');
+            musicBtn.textContent = '🎵';
+          }
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.5 });
     page4Observer.observe(document.getElementById('page4'));
 
     console.log('💜 生日快乐！一切就绪。');
