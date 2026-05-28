@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生日惊喜 · 扫码卡片</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+      background: #0a0a1a;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      overflow-x: hidden;
+    }
+
+    /* ── Starfield ── */
+    #starfield {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── Card ── */
+    .card-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .card {
+      position: relative;
+      background: linear-gradient(160deg, rgba(30,20,55,0.95), rgba(15,10,35,0.98));
+      border-radius: 24px;
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+      box-shadow: 0 0 80px rgba(168,85,247,0.2), 0 0 40px rgba(236,72,153,0.1);
+    }
+
+    /* Animated border glow */
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 26px;
+      padding: 2px;
+      background: linear-gradient(135deg, #fbbf24, #ec4899, #a855f7, #fbbf24);
+      background-size: 300% 300%;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: borderFlow 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes borderFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* ── Card Content ── */
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fbbf24, #ec4899, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── QR Code Area ── */
+    .qr-container {
+      display: inline-block;
+      background: #fff;
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 0 30px rgba(251,191,36,0.2);
+      margin-bottom: 1rem;
+    }
+    #qrcode {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+    }
+    #qrcode img,
+    #qrcode canvas {
+      display: block;
+      border-radius: 4px;
+    }
+
+    .qr-fallback {
+      display: none;
+      width: 200px;
+      height: 200px;
+    }
+
+    /* ── URL Text ── */
+    .card-url {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      word-break: break-all;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* ── Actions ── */
+    .card-actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.65rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+      letter-spacing: 0.05em;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(168,85,247,0.3);
+    }
+    .btn-primary:active { transform: scale(0.95); }
+    .btn-ghost {
+      background: transparent;
+      color: #fbbf24;
+      border: 1px solid rgba(251,191,36,0.4);
+    }
+    .btn-ghost:active { background: rgba(251,191,36,0.1); }
+
+    /* ── Corner Decorations ── */
+    .corner-deco {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .corner-deco.top-left  { top: 16px; left: 16px; border-top: 1px solid #fbbf24; border-left: 1px solid #fbbf24; }
+    .corner-deco.top-right { top: 16px; right: 16px; border-top: 1px solid #fbbf24; border-right: 1px solid #fbbf24; }
+    .corner-deco.bot-left  { bottom: 16px; left: 16px; border-bottom: 1px solid #fbbf24; border-left: 1px solid #fbbf24; }
+    .corner-deco.bot-right { bottom: 16px; right: 16px; border-bottom: 1px solid #fbbf24; border-right: 1px solid #fbbf24; }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(30,20,50,0.95);
+      color: #fbbf24;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      z-index: 100;
+      border: 1px solid rgba(251,191,36,0.3);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ── Responsive ── */
+    @media (min-width: 768px) {
+      .card { padding: 3rem 2.5rem 2.5rem; }
+      .card-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starfield Background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Card -->
+  <div class="card-wrapper">
+    <div class="card">
+      <div class="corner-deco top-left"></div>
+      <div class="corner-deco top-right"></div>
+      <div class="corner-deco bot-left"></div>
+      <div class="corner-deco bot-right"></div>
+
+      <div class="card-icon">🎂</div>
+      <p class="card-title">生日惊喜</p>
+      <p class="card-subtitle">扫一扫，有话对你说</p>
+
+      <div class="qr-container">
+        <div id="qrcode"></div>
+      </div>
+
+      <div class="card-actions">
+        <button class="btn btn-primary" id="btnDownload">💾 保存二维码</button>
+        <button class="btn btn-ghost" id="btnCopy">📋 复制链接</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QRCode.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+  </script>
+
+  <script>
+  (function() {
+    // ───────────────────────────────
+    // 1. STARFIELD
+    // ───────────────────────────────
+    const sfCanvas = document.getElementById('starfield');
+    const sfCtx = sfCanvas.getContext('2d');
+    let stars = [];
+    const STAR_COUNT = 80;
+
+    function resizeStarfield() {
+      sfCanvas.width = window.innerWidth;
+      sfCanvas.height = window.innerHeight;
+    }
+
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < STAR_COUNT; i++) {
+        stars.push({
+          x: Math.random() * sfCanvas.width,
+          y: Math.random() * sfCanvas.height,
+          r: Math.random() * 2 + 0.5,
+          speed: Math.random() * 0.3 + 0.1,
+          opacity: Math.random() * 0.6 + 0.2,
+          twinkleSpeed: Math.random() * 0.02 + 0.005,
+          twinkleOffset: Math.random() * Math.PI * 2,
+          hue: ['#c4b5fd', '#fde68a', '#f9a8d4', '#fff'][Math.floor(Math.random() * 4)]
+        });
+      }
+    }
+
+    function drawStars(time) {
+      sfCtx.clearRect(0, 0, sfCanvas.width, sfCanvas.height);
+      for (const s of stars) {
+        const alpha = s.opacity + Math.sin(time * s.twinkleSpeed + s.twinkleOffset) * 0.2;
+        sfCtx.fillStyle = s.hue;
+        sfCtx.globalAlpha = Math.max(0.05, Math.min(0.8, alpha));
+        sfCtx.beginPath();
+        sfCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        sfCtx.fill();
+        s.y -= s.speed;
+        if (s.y < -5) { s.y = sfCanvas.height + 5; s.x = Math.random() * sfCanvas.width; }
+      }
+      sfCtx.globalAlpha = 1;
+    }
+
+    resizeStarfield();
+    createStars();
+
+    function renderLoop(time) {
+      drawStars(time);
+      requestAnimationFrame(renderLoop);
+    }
+    requestAnimationFrame(renderLoop);
+
+    window.addEventListener('resize', () => {
+      resizeStarfield();
+      createStars();
+    });
+
+    // ───────────────────────────────
+    // 2. QR CODE
+    // ───────────────────────────────
+    const qrContainer = document.getElementById('qrcode');
+    const targetUrl = 'https://dingshiji.github.io/my-single-page/';
+    let qrCodeInstance = null;
+
+    function renderQRCode() {
+      qrContainer.innerHTML = '';
+      try {
+        qrCodeInstance = new QRCode(qrContainer, {
+          text: targetUrl,
+          width: 200,
+          height: 200,
+          colorDark: '#1e1432',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.M
+        });
+      } catch (e) {
+        // Fallback: use API image
+        qrContainer.innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' +
+          encodeURIComponent(targetUrl) + '" width="200" height="200" alt="QR Code" style="display:block;border-radius:4px;">';
+      }
+    }
+
+    // Wait for QRCode library to load
+    function initQR() {
+      if (typeof QRCode !== 'undefined') {
+        renderQRCode();
+      } else {
+        // Retry a few times
+        let attempts = 0;
+        const interval = setInterval(() => {
+          attempts++;
+          if (typeof QRCode !== 'undefined') {
+            clearInterval(interval);
+            renderQRCode();
+          } else if (attempts >= 20) {
+            clearInterval(interval);
+            // Fallback
+            qrContainer.innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' +
+              encodeURIComponent(targetUrl) + '" width="200" height="200" alt="QR Code" style="display:block;border-radius:4px;">';
+          }
+        }, 250);
+      }
+    }
+    initQR();
+
+    // ───────────────────────────────
+    // 3. BUTTONS
+    // ───────────────────────────────
+    const toast = document.getElementById('toast');
+    let toastTimer = null;
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    // Download QR code as PNG
+    document.getElementById('btnDownload').addEventListener('click', () => {
+      const canvas = qrContainer.querySelector('canvas');
+      const img = qrContainer.querySelector('img');
+
+      if (canvas) {
+        // From canvas
+        const link = document.createElement('a');
+        link.download = 'birthday-qrcode.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        showToast('✅ 二维码已保存');
+      } else if (img) {
+        // From fallback img - fetch and re-render
+        const downloadImg = new Image();
+        downloadImg.crossOrigin = 'anonymous';
+        downloadImg.onload = function() {
+          const tmpCanvas = document.createElement('canvas');
+          tmpCanvas.width = downloadImg.width;
+          tmpCanvas.height = downloadImg.height;
+          const tmpCtx = tmpCanvas.getContext('2d');
+          tmpCtx.drawImage(downloadImg, 0, 0);
+          const link = document.createElement('a');
+          link.download = 'birthday-qrcode.png';
+          link.href = tmpCanvas.toDataURL('image/png');
+          link.click();
+          showToast('✅ 二维码已保存');
+        };
+        downloadImg.onerror = function() {
+          showToast('⚠️ 下载失败，请截图保存');
+        };
+        downloadImg.src = img.src;
+      }
+    });
+
+    // Copy link
+    document.getElementById('btnCopy').addEventListener('click', () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(targetUrl).then(() => {
+          showToast('📋 链接已复制');
+        }).catch(() => {
+          showToast('⚠️ 复制失败: ' + targetUrl);
+        });
+      } else {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = targetUrl;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          showToast('📋 链接已复制');
+        } catch (e) {
+          showToast('⚠️ 复制失败: ' + targetUrl);
+        }
+        document.body.removeChild(textarea);
+      }
+    });
+
+    console.log('💜 卡片已就绪');
+  })();
+  </script>
+</body>
+</html>
