@@ -1,1066 +1,675 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>生日快乐 · My Girl</title>
+<!DOCTYPE html><html><head>
+  <title>日中对译句集</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="file:///c:\Users\ding\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.12\crossnote\dependencies\katex\katex.min.css">
+  
+  
+  
+  
+  
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
-    :root {
-      --purple: #a855f7;
-      --purple-deep: #7c3aed;
-      --gold: #f59e0b;
-      --gold-light: #fbbf24;
-      --pink: #ec4899;
-      --bg: #0a0a1a;
-    }
-
-    body {
-      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: #fff;
-      overflow: hidden;
-      height: 100vh;
-      height: 100dvh;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    /* ── Background Canvas ── */
-    #starfield {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    /* ── Scroll Container ── */
-    .scroll-container {
-      position: relative;
-      z-index: 1;
-      height: 100vh;
-      height: 100dvh;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-    .scroll-container::-webkit-scrollbar { display: none; }
-
-    /* ── Section / Page ── */
-    .page {
-      height: 100vh;
-      height: 100dvh;
-      scroll-snap-align: start;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-inner {
-      text-align: center;
-      max-width: 360px;
-      width: 100%;
-      z-index: 1;
-    }
-
-    /* ── Decorative floating elements ── */
-    .float-hearts {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .float-heart {
-      position: absolute;
-      font-size: 1.5rem;
-      opacity: 0.15;
-      animation: floatUp linear infinite;
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
-      10% { opacity: 0.2; }
-      90% { opacity: 0.2; }
-      100% { transform: translateY(-100vh) rotate(360deg) scale(0.3); opacity: 0; }
-    }
-
-    /* ── Text Styles ── */
-    .page-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .page.visible .page-label { opacity: 1; transform: translateY(0); }
-
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--gold-light), var(--pink), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
-    }
-    .page.visible h1 { opacity: 1; transform: translateY(0); }
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #e2e8f0;
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
-    }
-    .page.visible h2 { opacity: 1; transform: translateY(0); }
-
-    .page-body {
-      font-size: 1.05rem;
-      line-height: 2;
-      color: #cbd5e1;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s;
-    }
-    .page.visible .page-body { opacity: 1; transform: translateY(0); }
-
-    .highlight {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 600;
-    }
-
-    /* ── Scroll Hint ── */
-    .scroll-hint {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      opacity: 0.6;
-      z-index: 1;
-    }
-    .scroll-hint span { font-size: 0.75rem; letter-spacing: 0.15em; }
-    .scroll-arrow {
-      width: 24px; height: 24px;
-      border-right: 2px solid var(--gold);
-      border-bottom: 2px solid var(--gold);
-      transform: rotate(45deg);
-      animation: bounceDown 1.5s ease-in-out infinite;
-    }
-    @keyframes bounceDown {
-      0%, 100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(8px); }
-    }
-
-    /* ── Page-specific ── */
-    .big-number {
-      font-size: 4rem;
-      font-weight: 900;
-      background: linear-gradient(180deg, #fbbf24 0%, #ec4899 50%, #a855f7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-      opacity: 0;
-      transform: scale(0.5);
-      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
-    }
-    .page.visible .big-number { opacity: 1; transform: scale(1); }
-
-    .glow-ring {
-      position: absolute;
-      width: 200px; height: 200px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, transparent 70%);
-      pointer-events: none;
-      animation: pulse 3s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.5); opacity: 0.2; }
-    }
-
-    /* ── Wheel Section ── */
-    .wheel-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-    }
-    .wheel-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #wheelCanvas {
-      display: block;
-      filter: drop-shadow(0 0 30px rgba(168,85,247,0.4));
-      transition: filter 0.3s;
-    }
-    #wheelCanvas.spinning {
-      filter: drop-shadow(0 0 50px rgba(245,158,11,0.6));
-    }
-    .wheel-pointer {
-      position: absolute;
-      top: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 18px solid transparent;
-      border-right: 18px solid transparent;
-      border-top: 28px solid var(--gold-light);
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-      z-index: 5;
-    }
-    .spin-btn {
-      padding: 0.9rem 3rem;
-      border: none;
-      border-radius: 50px;
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      cursor: pointer;
-      box-shadow: 0 4px 24px rgba(168,85,247,0.4);
-      transition: all 0.3s;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .spin-btn:active { transform: scale(0.95); box-shadow: 0 2px 12px rgba(168,85,247,0.3); }
-    .spin-btn:disabled { opacity: 0.5; pointer-events: none; }
-
-    /* ── Prize Modal ── */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s;
-    }
-    .modal-overlay.show { opacity: 1; pointer-events: auto; }
-
-    .prize-card {
-      background: linear-gradient(145deg, rgba(30,20,50,0.95), rgba(20,10,40,0.98));
-      border: 1px solid rgba(251,191,36,0.3);
-      border-radius: 20px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      max-width: 340px;
-      width: 100%;
-      position: relative;
-      transform: translateY(40px) scale(0.9);
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 0 60px rgba(168,85,247,0.3), 0 0 120px rgba(236,72,153,0.15);
-    }
-    .modal-overlay.show .prize-card { transform: translateY(0) scale(1); }
-
-    .prize-card::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, var(--gold), var(--pink), var(--purple), var(--gold));
-      z-index: -1;
-      opacity: 0.5;
-      animation: borderGlow 3s linear infinite;
-    }
-    @keyframes borderGlow {
-      0% { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
-    }
-
-    .prize-icon { font-size: 3.5rem; margin-bottom: 0.5rem; animation: bounceIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
-    @keyframes bounceIn {
-      0% { transform: scale(0); }
-      60% { transform: scale(1.15); }
-      100% { transform: scale(1); }
-    }
-    .prize-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      margin-bottom: 0.25rem;
-    }
-    .prize-price {
-      font-size: 1.1rem;
-      color: #f472b6;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    .prize-msg {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: #cbd5e1;
-      font-style: italic;
-      margin-bottom: 1.5rem;
-    }
-    .prize-close {
-      padding: 0.7rem 2.5rem;
-      border: 1px solid var(--gold);
-      border-radius: 50px;
-      background: transparent;
-      color: var(--gold-light);
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .prize-close:active { background: rgba(251,191,36,0.15); }
-
-    /* ── Confetti Canvas ── */
-    #confettiCanvas {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      pointer-events: none;
-    }
-
-    /* ── Music Toggle ── */
-    .music-btn {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 50;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid rgba(251,191,36,0.3);
-      background: rgba(20,10,40,0.7);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: #fbbf24;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .music-btn:active { transform: scale(0.9); }
-    .music-btn.playing {
-      border-color: rgba(236,72,153,0.5);
-      background: rgba(236,72,153,0.15);
-      animation: musicPulse 2s ease-in-out infinite;
-    }
-    @keyframes musicPulse {
-      0%, 100% { box-shadow: 0 0 8px rgba(236,72,153,0.3); }
-      50% { box-shadow: 0 0 20px rgba(236,72,153,0.6); }
-    }
-    .music-btn .note1, .music-btn .note2 {
-      position: absolute;
-      font-size: 0.5rem;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .music-btn.playing .note1 {
-      animation: noteFloat 1.2s ease-out infinite;
-      opacity: 0;
-    }
-    .music-btn.playing .note2 {
-      animation: noteFloat 1.2s ease-out 0.4s infinite;
-      opacity: 0;
-    }
-    @keyframes noteFloat {
-      0% { transform: translate(0,0); opacity: 0.8; }
-      100% { transform: translate(8px,-20px); opacity: 0; }
-    }
-
-    /* ── Responsive ── */
-    @media (min-width: 768px) {
-      h1 { font-size: 2.8rem; }
-      h2 { font-size: 1.6rem; }
-      .page-body { font-size: 1.15rem; }
-      .big-number { font-size: 5rem; }
-      .page-inner { max-width: 480px; }
-    }
   </style>
-</head>
-<body>
+  <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+// your code here
+});
+</script></head><body for="html-export">
 
-  <!-- Background Music -->
-  <audio id="bgMusic" src="bgm.mp3" loop preload="auto"></audio>
-  <!-- Prize Sound Effect -->
-  <audio id="prizeAudio" src="prize.mp3" preload="auto"></audio>
 
-  <!-- Music Toggle Button -->
-  <button class="music-btn" id="musicBtn" aria-label="音乐开关">
-    🎵
-    <span class="note1">♪</span>
-    <span class="note2">♫</span>
-  </button>
+  <div class="crossnote markdown-preview  ">
+  
+<h1 id="周末速成--日中对译句集">周末速成 — 日中对译句集 </h1>
+<blockquote>
+<p>全部罗马音。照着念就行。约 80 句。</p>
+</blockquote>
+<hr>
+<h2 id="一-动词变形用例句学">一、动词变形（用例句学） </h2>
+<h3 id="要做--不要做">要做 / 不要做 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ima yaru</td>
+<td>现在做</td>
+</tr>
+<tr>
+<td>2</td>
+<td>kore wo suru</td>
+<td>做这个</td>
+</tr>
+<tr>
+<td>3</td>
+<td>kore wo shinai</td>
+<td>不做这个</td>
+</tr>
+<tr>
+<td>4</td>
+<td>mada wakaranai</td>
+<td>还不懂</td>
+</tr>
+<tr>
+<td>5</td>
+<td>daijoubu</td>
+<td>没事</td>
+</tr>
+<tr>
+<td>9</td>
+<td>kore wo hiraku</td>
+<td>打开这个</td>
+</tr>
+<tr>
+<td>10</td>
+<td>mada hirakanai</td>
+<td>先不打开</td>
+</tr>
+<tr>
+<td>11</td>
+<td>koko ni kaku</td>
+<td>写在这里</td>
+</tr>
+<tr>
+<td>12</td>
+<td>nani mo kakanai</td>
+<td>什么都不写</td>
+</tr>
+<tr>
+<td>13</td>
+<td>matte, ima miru</td>
+<td>等等，现在看</td>
+</tr>
+<tr>
+<td>14</td>
+<td>kore wa minai</td>
+<td>这个不看</td>
+</tr>
+</tbody>
+</table>
+<h3 id="正在做">正在做 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15</td>
+<td>ima yatte iru</td>
+<td>正在做</td>
+</tr>
+<tr>
+<td>16</td>
+<td>ima koodo wo kaite iru</td>
+<td>正在写代码</td>
+</tr>
+<tr>
+<td>19</td>
+<td>nani wo shite iru?</td>
+<td>在干什么？</td>
+</tr>
+<tr>
+<td>20</td>
+<td>ima nihongo wo benkyou shite iru</td>
+<td>正在学日语</td>
+</tr>
+</tbody>
+</table>
+<h3 id="能做--不能做">能做 / 不能做 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>dekiru</td>
+<td>能做 / 会</td>
+</tr>
+<tr>
+<td>22</td>
+<td>dekinai</td>
+<td>做不了 / 不会</td>
+</tr>
+<tr>
+<td>23</td>
+<td>kore de dekiru</td>
+<td>用这个能做</td>
+</tr>
+<tr>
+<td>23a</td>
+<td>A de B ga dekiru</td>
+<td>用A能做B</td>
+</tr>
+<tr>
+<td>24</td>
+<td>dekiru?</td>
+<td>会吗？</td>
+</tr>
+<tr>
+<td>25</td>
+<td>ore wa dekiru</td>
+<td>我能行</td>
+</tr>
+<tr>
+<td>25a</td>
+<td>anata wa dekiru</td>
+<td>你能行</td>
+</tr>
+<tr>
+<td>27</td>
+<td>jidou de kakeru</td>
+<td>能自动写</td>
+</tr>
+<tr>
+<td>27a</td>
+<td>(de = 用/通过, 工具手段)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="二-时间词">二、时间词 </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28</td>
+<td>ima yaru</td>
+<td>现在做</td>
+</tr>
+<tr>
+<td>29</td>
+<td>mazu kore wo hiraku</td>
+<td>首先打开这个</td>
+</tr>
+<tr>
+<td>30</td>
+<td>tsugi ni, koko wo kurikku</td>
+<td>接下来，点击这里</td>
+</tr>
+<tr>
+<td>31</td>
+<td>sorekara, kore wo miru</td>
+<td>然后，看这个</td>
+</tr>
+<tr>
+<td>32</td>
+<td>saigo ni, kakunin suru</td>
+<td>最后，确认一下</td>
+</tr>
+</tbody>
+</table>
+<p>| 34 | mou dekita | 已经好了 |<br>
+| 35 | mada dekinai | 还不行 |<br>
+| 36 | ijou desu | 以上就是全部 |</p>
+<hr>
+<h2 id="三-招呼">三、招呼 </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>37</td>
+<td>ohayou gozaimasu</td>
+<td>早上好</td>
+</tr>
+<tr>
+<td>38</td>
+<td>konnichiwa</td>
+<td>你好</td>
+</tr>
+<tr>
+<td>39</td>
+<td>otsukaresama desu</td>
+<td>辛苦了</td>
+</tr>
+<tr>
+<td>40</td>
+<td>osakini shitsurei shimasu</td>
+<td>我先走了</td>
+</tr>
+<tr>
+<td>41</td>
+<td>arigatou gozaimasu</td>
+<td>谢谢</td>
+</tr>
+<tr>
+<td>42</td>
+<td>sumimasen</td>
+<td>对不起 / 打扰了</td>
+</tr>
+<tr>
+<td>43</td>
+<td>daijoubu desu</td>
+<td>没问题</td>
+</tr>
+<tr>
+<td>44</td>
+<td>yoroshiku onegai shimasu</td>
+<td>请多关照</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="四-反应句">四、反应句 </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>45</td>
+<td>naruhodo</td>
+<td>原来如此</td>
+</tr>
+<tr>
+<td>46</td>
+<td>sou desu ne</td>
+<td>是啊</td>
+</tr>
+<tr>
+<td>47</td>
+<td>sugoi!</td>
+<td>好厉害！</td>
+</tr>
+<tr>
+<td>48</td>
+<td>ii desu ne</td>
+<td>不错啊</td>
+</tr>
+<tr>
+<td>49</td>
+<td>wakarimashita</td>
+<td>明白了</td>
+</tr>
+<tr>
+<td>50</td>
+<td>wakarimasen</td>
+<td>我不明白</td>
+</tr>
+<tr>
+<td>51</td>
+<td>daijoubu desuka?</td>
+<td>没问题吧？</td>
+</tr>
+<tr>
+<td>52</td>
+<td>hontou desuka?</td>
+<td>真的吗？</td>
+</tr>
+<tr>
+<td>54</td>
+<td>sore wa nani?</td>
+<td>那是什么？</td>
+</tr>
+<tr>
+<td>54a</td>
+<td>shiranai</td>
+<td>不知道</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="五-演示-claude-code">五、演示 Claude Code </h2>
+<h3 id="开场">开场 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>55a</td>
+<td>issho ni Claude Code wo benkyou shite iru</td>
+<td>一起在学 Claude Code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="操作中">操作中 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>58</td>
+<td>koko wo kurikku shimasu</td>
+<td>点击这里</td>
+</tr>
+<tr>
+<td>58a</td>
+<td>(hiraku = 原形, hirakimasu = 礼貌, hiraite = te形)</td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>koko ni kaite kudasai</td>
+<td>请写在这里</td>
+</tr>
+<tr>
+<td>60</td>
+<td>kore wo hirakimasu</td>
+<td>打开这个</td>
+</tr>
+<tr>
+<td>61</td>
+<td>kore wo tojimasu</td>
+<td>关闭这个</td>
+</tr>
+<tr>
+<td>62</td>
+<td>ima yatte imasu</td>
+<td>正在做</td>
+</tr>
+<tr>
+<td>62a</td>
+<td>(yatte = yaru 的 te形)</td>
+<td></td>
+</tr>
+<tr>
+<td>63</td>
+<td>mou sukoshi desu</td>
+<td>马上就好</td>
+</tr>
+<tr>
+<td>64</td>
+<td>dekimashita!</td>
+<td>做好了！</td>
+</tr>
+<tr>
+<td>65</td>
+<td>mite kudasai</td>
+<td>请看</td>
+</tr>
+<tr>
+<td>67</td>
+<td>chotto matte kudasai</td>
+<td>请稍等一下</td>
+</tr>
+<tr>
+<td>67a</td>
+<td>sore wa shinai de kudasai</td>
+<td>请不要这么做</td>
+</tr>
+</tbody>
+</table>
+<h3 id="确认">确认 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>68</td>
+<td>wakarimasuka?</td>
+<td>明白吗？</td>
+</tr>
+<tr>
+<td>70</td>
+<td>koko made daijoubu desuka?</td>
+<td>到这里没问题吧？</td>
+</tr>
+<tr>
+<td>70a</td>
+<td>(made = 到/为止)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="收尾">收尾 </h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>73</td>
+<td>ijou desu</td>
+<td>以上就是全部</td>
+</tr>
+<tr>
+<td>74</td>
+<td>arigatou gozaimashita</td>
+<td>谢谢大家</td>
+</tr>
+<tr>
+<td>75</td>
+<td>nanika areba kiite kudasai</td>
+<td>有什么问题请说</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="六-评价">六、评价 </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>76</td>
+<td>kore wa benri desu ne</td>
+<td>这个好方便啊</td>
+</tr>
+<tr>
+<td>77</td>
+<td>kore wa kantan desu</td>
+<td>这个简单</td>
+</tr>
+<tr>
+<td>78</td>
+<td>hayai!</td>
+<td>好快！</td>
+</tr>
+<tr>
+<td>79</td>
+<td>kantan deshou?</td>
+<td>很简单对吧？</td>
+</tr>
+<tr>
+<td>80</td>
+<td>omoshiroi desu ne</td>
+<td>真有意思</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="七-闲聊">七、闲聊 </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+</table>
+<p>| 83 | ii tenki desu ne | 天气真好啊 |<br>
+| 83a | warui tenki desu ne | 天气真差啊 |<br>
+| 84 | shuumatsu dou deshita ka? | 周末怎么样？ |<br>
+| 84a | (shuumatsu=周末, dou=怎么样, deshita=でした过去式, ka=吗) |<br>
+| 85 | kore oishii desu ne | 这个好吃啊 |<br>
+| 87 | doko de tabemasu ka? | 在哪吃？ |<br>
+| 87a | (doko=哪里, de=在, tabemasu=吃) |<br>
+| 89a | nemui | 困了/想睡 |<br>
+| 90 | tsukaremashita | 累了 |</p>
+<hr>
+<h2 id="七-保命句">七、保命句 </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>92</td>
+<td>mou ichido itte kudasai</td>
+<td>请再说一遍</td>
+</tr>
+<tr>
+<td>(解释上面的各部分)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>92a</td>
+<td>ChatGPT de  shite kudasai</td>
+<td>请用 ChatGPT</td>
+</tr>
+<tr>
+<td>(我上面改的这句对吗)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="十-完整演示流程背这一段">十、完整演示流程（背这一段） </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>日语</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>mazu, PowerShell wo hirakimasu.</td>
+<td>首先，打开 PowerShell。</td>
+</tr>
+<tr>
+<td></td>
+<td>kore ga Claude Code desu.</td>
+<td>这就是 Claude Code。</td>
+</tr>
+<tr>
+<td></td>
+<td>(ga=主语强调/新信息, wa=话题/已知. kore ga=这个就是!, kore wa=这个呢)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sore wa shinai de kudasai</td>
+<td>请不要这么做</td>
+</tr>
+<tr>
+<td></td>
+<td>koko de, promp-to wo nyuuryoku shimasu.</td>
+<td>在这里，输入提示词。</td>
+</tr>
+<tr>
+<td></td>
+<td>(nyuuryoku=输入, 可以换成 kaku: koko ni promp-to wo kaku)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>"webusaito wo shite" to kakimasu.</td>
+<td>写下"请做一个网站"。</td>
+</tr>
+<tr>
+<td></td>
+<td>ima, koodo wo seisei shite imasu.</td>
+<td>现在，正在生成代码。</td>
+</tr>
+<tr>
+<td></td>
+<td>...dekimashita!</td>
+<td>……做好了！</td>
+</tr>
+<tr>
+<td></td>
+<td>mite kudasai. kore wa jidou de shita webusaito desu.</td>
+<td>请看，这是自动做出来的网站。</td>
+</tr>
+<tr>
+<td></td>
+<td>kantan deshou?</td>
+<td>很简单对吧？</td>
+</tr>
+<tr>
+<td></td>
+<td>shitsumon arimasuka?</td>
+<td>有问题吗？</td>
+</tr>
+<tr>
+<td></td>
+<td>ijou desu.</td>
+<td>以上就是全部。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>💡 用法：先按分类背短句（1-102），最后把第十部分的流程连起来说。流程里的每个短句前面都学过，不用怕。</p>
+</blockquote>
 
-  <!-- Starfield Background -->
-  <canvas id="starfield"></canvas>
-
-  <!-- Main Scroll Container -->
-  <div class="scroll-container" id="scrollContainer">
-
-    <!-- ════ Page 1: Birthday ════ -->
-    <section class="page" id="page1">
-      <div class="float-hearts" id="hearts1"></div>
-      <div class="glow-ring" style="top:15%;left:50%;transform:translateX(-50%);"></div>
-      <div class="page-inner">
-        <p class="page-label">· HAPPY BIRTHDAY MINIMO·</p>
-        <h1>我的宝贝米娜<br>26岁生日快乐</h1>
-        <div class="big-number" style="font-size:3rem;background:linear-gradient(180deg,#fbbf24,#ec4899,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">2,898 天</div>
-        <p style="color:#94a3b8;font-size:0.85rem;margin-top:-0.5rem;">谢谢你一直都在</p>
-        <p class="page-body" style="margin-top:1.5rem;">
-          从18岁到26岁<br>
-          从青涩到成熟，从校园到社会<br>
-          身边的人来来去去<br>
-          而<span class="highlight">你一直都在</span>
-        </p>
-      </div>
-      <div class="scroll-hint"><span>向下滑动</span><div class="scroll-arrow"></div></div>
-    </section>
-
-    <!-- ════ Page 2: Thank You ════ -->
-    <section class="page" id="page2">
-      <div class="float-hearts" id="hearts2"></div>
-      <div class="glow-ring" style="top:30%;right:-60px;"></div>
-      <div class="page-inner">
-        <p class="page-label">· GRATEFUL ·</p>
-        <h1>谢谢你<br>陪我走过最难的路</h1>
-        <p class="page-body">
-          有一段日子<br>
-          我什么都没有，什么都给不了你<br><br>
-          但你从没抱怨过<br>
-          从没离开过<br><br>
-          谢谢你<br>
-          <span class="highlight">我的光</span>
-        </p>
-      </div>
-      <div class="scroll-hint"><span>向下滑动</span><div class="scroll-arrow"></div></div>
-    </section>
-
-    <!-- ════ Page 3: Promise ════ -->
-    <section class="page" id="page3">
-      <div class="float-hearts" id="hearts3"></div>
-      <div class="glow-ring" style="bottom:20%;left:-60px;"></div>
-      <div class="page-inner">
-        <p class="page-label">· PROMISE ·</p>
-        <h1>以后的每一天<br>换我来</h1>
-        <p class="page-body">
-          我会努力成为那个<br>
-          值得你托付一生的人<br><br>
-          不让你受委屈<br>
-          不让你一个人扛<br><br>
-          你值得这世上所有美好的东西<br>
-          <span class="highlight">我会一样一样拿给你</span>
-        </p>
-      </div>
-      <div class="scroll-hint"><span>礼物在下面</span><div class="scroll-arrow"></div></div>
-    </section>
-
-    <!-- ════ Page 4: Wheel ════ -->
-    <section class="page" id="page4">
-      <div class="page-inner" style="max-width:380px;">
-        <p class="page-label" style="opacity:1;transform:none;">· YOUR GIFT ·</p>
-        <div class="wheel-wrapper">
-          <p style="font-size:1rem;color:#e2e8f0;margin-bottom:0.25rem;">转动转盘，看看你的生日礼物</p>
-          <p style="font-size:2rem;margin-bottom:0;">🎁</p>
-          <div class="wheel-container" id="wheelContainer">
-            <div class="wheel-pointer"></div>
-            <canvas id="wheelCanvas"></canvas>
-          </div>
-          <button class="spin-btn" id="spinBtn">✨ 转动转盘</button>
-        </div>
-      </div>
-    </section>
   </div>
+  
+  
 
-  <!-- Prize Modal -->
-  <div class="modal-overlay" id="prizeModal">
-    <div class="prize-card">
-      <div class="prize-icon">🧬</div>
-      <p class="prize-title">移液枪兑换券</p>
-      <p class="prize-price">价值 ¥8,000</p>
-      <p class="prize-msg">
-        "你实验室里那支旧的该换了。<br>
-        每次看你做实验的辛劳，我都心疼。<br>
-        希望这支新的，能替你分担一点点辛苦。<br>
-        ——爱你的老公公"
-      </p>
-      <button class="prize-close" id="prizeClose">收下心意 💌</button>
-    </div>
-  </div>
 
-  <!-- Confetti Canvas -->
-  <canvas id="confettiCanvas"></canvas>
 
-  <script>
-  (function() {
-    // ───────────────────────────────
-    // 1. STARFIELD BACKGROUND
-    // ───────────────────────────────
-    const sfCanvas = document.getElementById('starfield');
-    const sfCtx = sfCanvas.getContext('2d');
-    let stars = [];
-    const STAR_COUNT = 100;
 
-    function resizeStarfield() {
-      sfCanvas.width = window.innerWidth;
-      sfCanvas.height = window.innerHeight;
-    }
 
-    function createStars() {
-      stars = [];
-      for (let i = 0; i < STAR_COUNT; i++) {
-        stars.push({
-          x: Math.random() * sfCanvas.width,
-          y: Math.random() * sfCanvas.height,
-          r: Math.random() * 2 + 0.5,
-          speed: Math.random() * 0.3 + 0.1,
-          opacity: Math.random() * 0.6 + 0.2,
-          twinkleSpeed: Math.random() * 0.02 + 0.005,
-          twinkleOffset: Math.random() * Math.PI * 2,
-          hue: ['#c4b5fd', '#fde68a', '#f9a8d4', '#fff'][Math.floor(Math.random() * 4)]
-        });
-      }
-    }
 
-    function drawStars(time) {
-      sfCtx.clearRect(0, 0, sfCanvas.width, sfCanvas.height);
-      for (const s of stars) {
-        const alpha = s.opacity + Math.sin(time * s.twinkleSpeed + s.twinkleOffset) * 0.2;
-        sfCtx.fillStyle = s.hue;
-        sfCtx.globalAlpha = Math.max(0.05, Math.min(0.8, alpha));
-        sfCtx.beginPath();
-        sfCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        sfCtx.fill();
 
-        // drift upward
-        s.y -= s.speed;
-        if (s.y < -5) { s.y = sfCanvas.height + 5; s.x = Math.random() * sfCanvas.width; }
-      }
-      sfCtx.globalAlpha = 1;
-    }
-
-    resizeStarfield();
-    createStars();
-
-    // ───────────────────────────────
-    // 2. FLOATING HEARTS
-    // ───────────────────────────────
-    function spawnHearts(containerId) {
-      const container = document.getElementById(containerId);
-      if (!container) return;
-      const emojis = ['💕', '💖', '✨', '💫', '🌷', '💝', '🕊️', '🌟'];
-      for (let i = 0; i < 8; i++) {
-        const el = document.createElement('span');
-        el.className = 'float-heart';
-        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        el.style.left = Math.random() * 90 + '%';
-        el.style.top = (60 + Math.random() * 40) + '%';
-        el.style.animationDuration = (6 + Math.random() * 10) + 's';
-        el.style.animationDelay = Math.random() * 5 + 's';
-        el.style.fontSize = (1 + Math.random() * 2) + 'rem';
-        container.appendChild(el);
-      }
-    }
-    spawnHearts('hearts1');
-    spawnHearts('hearts2');
-    spawnHearts('hearts3');
-
-    // ───────────────────────────────
-    // 3. PAGE VISIBILITY (IntersectionObserver)
-    // ───────────────────────────────
-    const pages = document.querySelectorAll('.page');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.4 });
-
-    pages.forEach(page => observer.observe(page));
-
-    // Mark page4 as always visible (last page, always in view when reached)
-    // Also trigger initial visibility for page1
-    setTimeout(() => {
-      const firstPage = document.getElementById('page1');
-      if (firstPage.getBoundingClientRect().top >= -10) {
-        firstPage.classList.add('visible');
-      }
-    }, 100);
-
-    // ───────────────────────────────
-    // 4. LUCKY WHEEL
-    // ───────────────────────────────
-    const wheelCanvas = document.getElementById('wheelCanvas');
-    const wheelCtx = wheelCanvas.getContext('2d');
-    const spinBtn = document.getElementById('spinBtn');
-    const wheelContainer = document.getElementById('wheelContainer');
-
-    const SEGMENTS = 8;
-    const COLORS = [
-      '#FF6B6B', '#FF9F43', '#FECA57', '#54A0FF',
-      '#A55EEA', '#FF6FB7', '#48DBFB', '#1DD1A1'
-    ];
-    const LABEL = '🎁 神秘大奖';
-    const TARGET_IDX = 3; // which segment the pointer lands on (0-indexed)
-
-    let wheelSize = 0;
-    let wheelRotation = 0; // radians
-    let isSpinning = false;
-    let animId = null;
-
-    function resizeWheel() {
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
-      wheelSize = Math.min(300, vw * 0.78, vh * 0.4);
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      wheelCanvas.width = wheelSize * dpr;
-      wheelCanvas.height = wheelSize * dpr;
-      wheelCanvas.style.width = wheelSize + 'px';
-      wheelCanvas.style.height = wheelSize + 'px';
-      wheelCtx.setTransform(1, 0, 0, 1, 0, 0);
-      wheelCtx.scale(dpr, dpr);
-      // Adjust pointer position
-      const pointer = wheelContainer.querySelector('.wheel-pointer');
-      if (pointer) {
-        pointer.style.borderLeftWidth = (wheelSize * 0.06) + 'px';
-        pointer.style.borderRightWidth = (wheelSize * 0.06) + 'px';
-        pointer.style.borderTopWidth = (wheelSize * 0.09) + 'px';
-      }
-    }
-
-    function drawWheel(rotation) {
-      const cx = wheelSize / 2;
-      const cy = wheelSize / 2;
-      const radius = wheelSize / 2 - 4;
-      const sliceAngle = (Math.PI * 2) / SEGMENTS;
-
-      wheelCtx.clearRect(0, 0, wheelSize, wheelSize);
-
-      // Draw segments
-      for (let i = 0; i < SEGMENTS; i++) {
-        const startAngle = -Math.PI / 2 + i * sliceAngle + rotation;
-        const endAngle = startAngle + sliceAngle;
-
-        // Segment fill
-        wheelCtx.beginPath();
-        wheelCtx.moveTo(cx, cy);
-        wheelCtx.arc(cx, cy, radius, startAngle, endAngle);
-        wheelCtx.closePath();
-
-        const grad = wheelCtx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-        grad.addColorStop(0, COLORS[i]);
-        grad.addColorStop(1, COLORS[i] + '99');
-        wheelCtx.fillStyle = grad;
-        wheelCtx.fill();
-
-        // Segment border
-        wheelCtx.strokeStyle = 'rgba(255,255,255,0.2)';
-        wheelCtx.lineWidth = 1.5;
-        wheelCtx.stroke();
-
-        // Label
-        wheelCtx.save();
-        wheelCtx.translate(cx, cy);
-        wheelCtx.rotate(startAngle + sliceAngle / 2);
-        wheelCtx.textAlign = 'center';
-        wheelCtx.textBaseline = 'middle';
-        const textRadius = radius * 0.65;
-        wheelCtx.fillStyle = '#fff';
-        wheelCtx.font = `bold ${Math.max(12, wheelSize * 0.045)}px "PingFang SC","Microsoft YaHei",sans-serif`;
-        wheelCtx.shadowColor = 'rgba(0,0,0,0.3)';
-        wheelCtx.shadowBlur = 3;
-        wheelCtx.fillText(LABEL, textRadius, 0);
-        wheelCtx.shadowBlur = 0;
-        wheelCtx.restore();
-      }
-
-      // Outer ring
-      wheelCtx.beginPath();
-      wheelCtx.arc(cx, cy, radius + 2, 0, Math.PI * 2);
-      wheelCtx.strokeStyle = 'rgba(251,191,36,0.6)';
-      wheelCtx.lineWidth = 3;
-      wheelCtx.stroke();
-
-      // Decorative dots around ring
-      for (let i = 0; i < 16; i++) {
-        const angle = (i / 16) * Math.PI * 2;
-        const dx = cx + Math.cos(angle) * (radius + 6);
-        const dy = cy + Math.sin(angle) * (radius + 6);
-        wheelCtx.beginPath();
-        wheelCtx.arc(dx, dy, 3, 0, Math.PI * 2);
-        wheelCtx.fillStyle = i % 2 === 0 ? '#fbbf24' : '#fff';
-        wheelCtx.fill();
-      }
-
-      // Center circle
-      const centerGrad = wheelCtx.createRadialGradient(cx, cy, 0, cx, cy, radius * 0.2);
-      centerGrad.addColorStop(0, '#fff');
-      centerGrad.addColorStop(1, '#e2e8f0');
-      wheelCtx.beginPath();
-      wheelCtx.arc(cx, cy, radius * 0.18, 0, Math.PI * 2);
-      wheelCtx.fillStyle = centerGrad;
-      wheelCtx.fill();
-      wheelCtx.strokeStyle = 'rgba(251,191,36,0.8)';
-      wheelCtx.lineWidth = 2;
-      wheelCtx.stroke();
-
-      // Center text
-      wheelCtx.fillStyle = '#7c3aed';
-      wheelCtx.font = `bold ${Math.max(13, wheelSize * 0.05)}px "PingFang SC","Microsoft YaHei",sans-serif`;
-      wheelCtx.textAlign = 'center';
-      wheelCtx.textBaseline = 'middle';
-      wheelCtx.fillText('GO', cx, cy);
-    }
-
-    function getTargetAngle() {
-      const sliceAngle = 360 / SEGMENTS;
-      const segmentCenter = TARGET_IDX * sliceAngle + sliceAngle / 2;
-      let targetDeg = 360 - segmentCenter;
-      if (targetDeg < 0) targetDeg += 360;
-      return targetDeg;
-    }
-
-    function spinWheel() {
-      if (isSpinning) return;
-      isSpinning = true;
-      spinBtn.disabled = true;
-      wheelCanvas.classList.add('spinning');
-
-      // Sync spin end with prize.mp3 at 20s mark
-      const prizeAudio = document.getElementById('prizeAudio');
-      const PRIZE_HIT_TIME = 20; // target second in prize.mp3
-      const MIN_SPIN_DURATION = 3000; // minimum 3s spin
-
-      let remainingMs = MIN_SPIN_DURATION;
-      if (prizeAudio && !prizeAudio.paused && prizeAudio.currentTime < PRIZE_HIT_TIME) {
-        remainingMs = Math.max(MIN_SPIN_DURATION, (PRIZE_HIT_TIME - prizeAudio.currentTime) * 1000);
-      }
-
-      const numSpins = 5 + Math.floor(Math.random() * 4);
-      const targetDeg = getTargetAngle();
-      const totalDeg = numSpins * 360 + targetDeg + (Math.random() * 10 - 5);
-      const totalRad = totalDeg * Math.PI / 180;
-
-      const startRotation = wheelRotation;
-      const targetRotation = startRotation + totalRad;
-      const duration = remainingMs;
-      const startTime = performance.now();
-
-      function easeOutQuart(t) {
-        return 1 - Math.pow(1 - t, 4);
-      }
-
-      function animate(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easedProgress = easeOutQuart(progress);
-
-        wheelRotation = startRotation + totalRad * easedProgress;
-        drawWheel(wheelRotation);
-
-        if (progress < 1) {
-          animId = requestAnimationFrame(animate);
-        } else {
-          // Wobble
-          wobbleWheel(now, wheelRotation, totalRad);
-        }
-      }
-
-      animId = requestAnimationFrame(animate);
-    }
-
-    function wobbleWheel(startTime, baseRotation, totalRotation) {
-      const wobbleDuration = 800;
-      const wobbleAmplitude = 0.03; // radians
-
-      function wobble(now) {
-        const elapsed = now - startTime;
-        const progress = elapsed / wobbleDuration;
-
-        if (progress >= 1) {
-          wheelRotation = baseRotation;
-          drawWheel(wheelRotation);
-          onSpinComplete();
-          return;
-        }
-
-        const decay = Math.exp(-progress * 5);
-        const oscillation = Math.sin(progress * Math.PI * 6) * wobbleAmplitude * decay;
-        wheelRotation = baseRotation + oscillation;
-        drawWheel(wheelRotation);
-        requestAnimationFrame(wobble);
-      }
-
-      requestAnimationFrame(wobble);
-    }
-
-    function onSpinComplete() {
-      isSpinning = false;
-      spinBtn.disabled = false;
-      wheelCanvas.classList.remove('spinning');
-      // Show prize after a short delay
-      setTimeout(showPrize, 400);
-    }
-
-    // ───────────────────────────────
-    // 5. PRIZE MODAL & CONFETTI
-    // ───────────────────────────────
-    const prizeModal = document.getElementById('prizeModal');
-    const prizeClose = document.getElementById('prizeClose');
-    const confettiCanvas = document.getElementById('confettiCanvas');
-    const confettiCtx = confettiCanvas.getContext('2d');
-    let confettiParticles = [];
-    let confettiAnimId = null;
-
-    function resizeConfetti() {
-      confettiCanvas.width = window.innerWidth;
-      confettiCanvas.height = window.innerHeight;
-    }
-
-    function spawnConfetti() {
-      const colors = ['#fbbf24', '#f59e0b', '#ec4899', '#a855f7', '#f472b6',
-                       '#FF6B6B', '#54A0FF', '#1DD1A1', '#fff', '#fde68a'];
-      confettiParticles = [];
-      const cx = window.innerWidth / 2;
-      const cy = window.innerHeight / 2;
-
-      for (let i = 0; i < 120; i++) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = Math.random() * 8 + 4;
-        confettiParticles.push({
-          x: cx,
-          y: cy,
-          vx: Math.cos(angle) * speed * (0.5 + Math.random()),
-          vy: Math.sin(angle) * speed * (0.5 + Math.random()) - Math.random() * 5,
-          size: Math.random() * 7 + 3,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          rotation: Math.random() * Math.PI * 2,
-          rotationSpeed: (Math.random() - 0.5) * 0.3,
-          gravity: 0.08 + Math.random() * 0.08,
-          opacity: 1,
-          shape: Math.random() > 0.5 ? 'rect' : 'circle'
-        });
-      }
-    }
-
-    function animateConfetti(time) {
-      confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-      let alive = false;
-
-      for (const p of confettiParticles) {
-        if (p.opacity <= 0) continue;
-        alive = true;
-
-        p.x += p.vx;
-        p.y += p.vy;
-        p.vy += p.gravity;
-        p.vx *= 0.995;
-        p.rotation += p.rotationSpeed;
-        p.opacity -= 0.003;
-
-        confettiCtx.save();
-        confettiCtx.translate(p.x, p.y);
-        confettiCtx.rotate(p.rotation);
-        confettiCtx.globalAlpha = Math.max(0, p.opacity);
-        confettiCtx.fillStyle = p.color;
-
-        if (p.shape === 'rect') {
-          confettiCtx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
-        } else {
-          confettiCtx.beginPath();
-          confettiCtx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
-          confettiCtx.fill();
-        }
-
-        confettiCtx.restore();
-      }
-
-      confettiCtx.globalAlpha = 1;
-      if (alive) {
-        confettiAnimId = requestAnimationFrame(animateConfetti);
-      } else {
-        confettiParticles = [];
-      }
-    }
-
-    function showPrize() {
-      prizeModal.classList.add('show');
-      resizeConfetti();
-      spawnConfetti();
-      if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
-      confettiAnimId = requestAnimationFrame(animateConfetti);
-    }
-
-    function hidePrize() {
-      prizeModal.classList.remove('show');
-      if (confettiAnimId) {
-        cancelAnimationFrame(confettiAnimId);
-        confettiAnimId = null;
-      }
-      confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-      confettiParticles = [];
-    }
-
-    prizeClose.addEventListener('click', hidePrize);
-    prizeModal.addEventListener('click', (e) => {
-      if (e.target === prizeModal) hidePrize();
-    });
-
-    // ───────────────────────────────
-    // 6. EVENT LISTENERS
-    // ───────────────────────────────
-    spinBtn.addEventListener('click', spinWheel);
-
-    window.addEventListener('resize', () => {
-      resizeStarfield();
-      createStars();
-      resizeWheel();
-      resizeConfetti();
-      drawWheel(wheelRotation);
-    });
-
-    // ───────────────────────────────
-    // 7. INIT
-    // ───────────────────────────────
-    resizeWheel();
-    drawWheel(wheelRotation);
-    resizeConfetti();
-
-    // ───────────────────────────────
-    // 8. MUSIC CONTROL
-    // ───────────────────────────────
-    const bgMusic = document.getElementById('bgMusic');
-    const musicBtn = document.getElementById('musicBtn');
-    let musicPlaying = false;
-    let musicStarted = false; // track if user has interacted
-
-    bgMusic.volume = 0.4;
-
-    function playMusic() {
-      bgMusic.play().then(() => {
-        musicPlaying = true;
-        musicStarted = true;
-        musicBtn.classList.add('playing');
-        musicBtn.textContent = '🎶';
-      }).catch(() => {
-        // autoplay blocked, wait for user tap
-        musicPlaying = false;
-        musicBtn.classList.remove('playing');
-        musicBtn.textContent = '🎵';
-      });
-    }
-
-    function toggleMusic() {
-      if (musicPlaying) {
-        bgMusic.pause();
-        musicPlaying = false;
-        musicBtn.classList.remove('playing');
-        musicBtn.textContent = '🔇';
-      } else {
-        playMusic();
-      }
-    }
-
-    musicBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleMusic();
-    });
-
-    // Try autoplay on first user scroll (browsers allow after user gesture)
-    function tryAutoPlay() {
-      if (!musicStarted) {
-        playMusic();
-      }
-    }
-    const scrollContainer = document.getElementById('scrollContainer');
-    scrollContainer.addEventListener('scroll', tryAutoPlay, { once: true });
-    document.addEventListener('touchstart', tryAutoPlay, { once: true });
-
-    // ───────────────────────────────
-    // 9. RENDER LOOP (starfield)
-    // ───────────────────────────────
-    function renderLoop(time) {
-      drawStars(time);
-      requestAnimationFrame(renderLoop);
-    }
-    requestAnimationFrame(renderLoop);
-
-    // ───────────────────────────────
-    // 10. SCROLL OBSERVER for page4 wheel init + music switch
-    // ───────────────────────────────
-    let page4MusicSwitched = false;
-    const page4Observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          resizeWheel();
-          drawWheel(wheelRotation);
-
-          // Switch BGM → prize music on first arrival
-          if (!page4MusicSwitched) {
-            page4MusicSwitched = true;
-            // Fade out BGM
-            if (musicPlaying) {
-              const fadeOut = setInterval(() => {
-                if (bgMusic.volume > 0.02) {
-                  bgMusic.volume = Math.max(0, bgMusic.volume - 0.03);
-                } else {
-                  bgMusic.pause();
-                  bgMusic.volume = 0.4; // reset for later
-                  clearInterval(fadeOut);
-                }
-              }, 80);
-            }
-            // Play prize music
-            const prizeAudio = document.getElementById('prizeAudio');
-            if (prizeAudio) {
-              prizeAudio.volume = 0.7;
-              prizeAudio.currentTime = 0;
-              prizeAudio.play().catch(() => {});
-            }
-            // Update button state
-            musicPlaying = false;
-            musicBtn.classList.remove('playing');
-            musicBtn.textContent = '🎵';
-          }
-        }
-      });
-    }, { threshold: 0.5 });
-    page4Observer.observe(document.getElementById('page4'));
-
-    console.log('💜 生日快乐！一切就绪。');
-  })();
-  </script>
-</body>
-</html>
+</body></html>
